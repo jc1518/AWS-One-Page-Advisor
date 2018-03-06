@@ -9,3 +9,9 @@ OPA (One Page Advisor) is a tool that aggregates the results of trusted advisor 
 ```
 usage: python opa.py
 ```
+## Samples
+
+![Security](https://jackiechendotorg.files.wordpress.com/2018/03/screen-shot-2018-03-06-at-11-51-08-am.png)
+
+![cost efficiency](https://jackiechendotorg.files.wordpress.com/2018/03/screen-shot-2018-03-06-at-11-51-46-am.png)
+
