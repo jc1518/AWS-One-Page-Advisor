@@ -67,23 +67,11 @@ def get_check_summary(check_ids):
 def build_report(index, profile, category, report):
     print('>>>>>>>>>>>>> Checking', category ,'in AWS account', profile)
     report.append({'Account': profile})
-    """
-    security_check_matrix.append(
-        {
-            'Account': account_id+'\n('+account_name+')'
-        }
-    )
-    security_check = get_all_checks(account_id)['security']
-    security_check_summary = get_check_summary(list(security_check.keys()))
-    for check in security_check_summary['summaries']:
-        print(security_check[check['checkId']]['name'], ':', check['status'])
-        security_check_matrix[n][security_check[check['checkId']]['name']] = color[check['status']]
-    """
     category_check = get_all_checks(profile)[category]
     category_check_summary = get_check_summary(list(category_check.keys()))
     for check in category_check_summary['summaries']:
         print(category_check[check['checkId']]['name'], ':', check['status'])
-        report[n][category_check[check['checkId']]['name']] = color[check['status']]
+        report[index][category_check[check['checkId']]['name']] = color[check['status']]
 
 if __name__ == '__main__':
     security_check_report = []
