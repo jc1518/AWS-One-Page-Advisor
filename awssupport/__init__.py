@@ -34,3 +34,11 @@ class Client(object):
         except ClientError as e:
             print(e.response['Error']['Code'])
             sys.exit()
+
+    def describe_check_result(self, check_id):
+        try:
+            response = self.client.describe_trusted_advisor_check_result(checkId=check_id, language='en')
+            return response
+        except ClientError as e:
+            print(e.response['Error']['Code'])
+            sys.exit()
